@@ -44,7 +44,7 @@ export default function ThinkerUIPage() {
 
       <LivingSections />
 
-      <footer className={styles.footer}><Link className={styles.brand} href="https://www.thinkerlab.tech"><Mark small />Thinker</Link><p>Thinker UI · Design preview</p><a href="#overview">Back to top ↑</a></footer>
+      <footer className={styles.footer}><Link className={styles.brand} href="https://www.thinkerlab.tech"><Mark small />Thinker</Link><nav className={styles.footerLinks} aria-label="Footer"><Link href="/thinker-ui/components">Components</Link><a href="https://github.com/Thinker-Labs/thinker-ui">GitHub</a><a href="https://github.com/Thinker-Labs/thinker-ui/blob/main/LICENSE">License</a></nav><p>Thinker UI · Design preview</p><a href="#overview">Back to top ↑</a></footer>
     </main>
   );
 }
