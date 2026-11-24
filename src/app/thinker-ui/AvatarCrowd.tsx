@@ -31,7 +31,7 @@ function Card({ item }: { item: (typeof crowd)[number] }) {
   return (
     <li className={s.card}>
       <button ref={ref} type="button" className={s.pet} aria-label={`Pet ${item.def.name}`} onClick={() => { setHappy(true); window.setTimeout(() => setHappy(false), 1400); }}>
-        {visible ? <ThinkerAvatar definition={item.def} state={item.state} mood={happy ? 'happy' : 'neutral'} color={item.color} size={150} /> : <span style={{ display: 'block', width: 150, height: 150 }} />}
+        {visible ? <ThinkerAvatar definition={item.def} state={item.state} mood={happy ? 'happy' : 'neutral'} color={item.color} size={168} /> : <span style={{ display: 'block', width: 168, height: 168 }} />}
       </button>
       <span className={s.name}>{item.def.name}</span>
       <span className={s.state} data-state={item.state}>{item.state}</span>
