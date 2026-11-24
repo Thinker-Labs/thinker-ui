@@ -7,6 +7,7 @@ import LivingSections from './LivingSections';
 import MaterialStage from './MaterialStage';
 import ComponentStage from './ComponentStage';
 import AvatarCrowd from './AvatarCrowd';
+import HeroProof from './HeroProof';
 import styles from './page.module.css';
 
 const headlineFont=Space_Grotesk({subsets:['latin'],display:'swap',variable:'--font-thinker-headline'});
@@ -33,12 +34,13 @@ export default function ThinkerUIPage() {
         <p className={styles.heroEyebrow}>A different kind of component collection</p><h1 id="ui-title">A little more<br/><span>feeling.</span></h1>
         <p className={styles.intro}>Thinker UI. Tactile React components.<br className={styles.desktopBreak} /> Less friction. More room for your ideas.</p>
         <div className={styles.actions}><Link className={styles.primary} href="/thinker-ui/components#gallery">Explore the collection <span aria-hidden="true">↗</span></Link><a className={styles.secondary} href="#living-title">Try the studio <span aria-hidden="true">↓</span></a></div>
+        <HeroProof />
         </div>
       </section>
 
-      <ComponentStage />
-
       <AvatarCrowd />
+
+      <ComponentStage />
 
       <LivingSections />
 
