@@ -1,0 +1,354 @@
+.dialog {
+  font:
+    14px/1.7 var(--font-inter),
+    system-ui;
+  width: 440px;
+  max-width: calc(100vw - 36px);
+  max-height: calc(100dvh - 40px);
+  overflow: auto;
+  border: 0;
+  padding: 30px;
+  border-radius: 34px;
+  background: linear-gradient(
+    145deg,
+    var(--ui-material-top, #5b5b55),
+    var(--ui-control, #30302e) 75%
+  );
+  color: var(--ui-text, #f5f0e2);
+  box-shadow:
+    inset 0 1px 1px #fff5,
+    0 35px 90px #0007;
+  box-sizing: border-box;
+  animation: modalIn 0.3s cubic-bezier(0.2, 1.1, 0.3, 1);
+}
+.dialog::backdrop {
+  background: #0f17177a;
+  backdrop-filter: blur(9px);
+}
+.modalTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.modalGlyph {
+  width: 49px;
+  height: 49px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #f6efdd, #bfb396);
+  color: #4e493a;
+  font-size: 27px;
+  display: grid;
+  place-items: center;
+  box-shadow:
+    inset 1px 2px 2px #fff8,
+    0 7px 10px #0003;
+  transform: rotate(-7deg);
+}
+.dialog .close {
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ui-well, #222221);
+  color: var(--ui-muted, #b9b2a3);
+  font: 24px system-ui;
+  cursor: pointer;
+}
+.dialog h2 {
+  font:
+    430 31px/1.1 var(--font-inter),
+    system-ui;
+  letter-spacing: -1.3px;
+  max-width: 310px;
+  margin: 0 0 18px;
+  color: inherit;
+}
+.description,
+.modalBody {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--ui-muted, #b9b2a3);
+}
+.modalBody {
+  margin-top: 25px;
+}
+.modalBody button,
+.trigger,
+.popover button {
+  font: 12px system-ui;
+  border: 0;
+  border-radius: 22px;
+  min-height: 44px;
+  padding: 11px 18px;
+  cursor: pointer;
+  background: var(--ui-bg, #191919);
+  color: var(--ui-text, #f5f0e2);
+}
+.modalBody label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.modalBody input {
+  box-sizing: border-box;
+  width: 100%;
+  font: 14px system-ui;
+  padding: 15px;
+  border-radius: 16px;
+  min-height: 48px;
+  border: 0;
+  background: var(--ui-well, #222221);
+  color: var(--ui-text, #f5f0e2);
+  margin-bottom: 20px;
+}
+.modalBody p {
+  margin: 0 0 20px;
+}
+.modalBody .save {
+  background: linear-gradient(145deg, #f6efdd, #bfb396);
+  color: #39362c;
+  width: 100%;
+  box-shadow: 0 3px 0 #82785f;
+}
+.drawer {
+  margin: 16px 16px 16px auto;
+  height: calc(100dvh - 32px);
+  max-height: none;
+  max-width: calc(100vw - 32px);
+  border-radius: 30px;
+  animation: drawerIn 0.35s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.confirmActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 35px;
+}
+.confirmActions button {
+  flex: 1;
+}
+.confirmActions button:last-child {
+  background: linear-gradient(145deg, #f6efdd, #bfb396);
+  color: #39362c;
+}
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: var(--ui-control, #30302e);
+  box-shadow:
+    inset 0 1px 1px #ffffff20,
+    0 6px 12px #0002;
+}
+.popover {
+  font:
+    12px/1.8 var(--font-inter),
+    system-ui;
+  position: fixed;
+  inset: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  max-width: calc(100vw - 40px);
+  width: 300px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 25px;
+  padding: 24px;
+  background: var(--ui-control, #30302e);
+  color: var(--ui-text, #f5f0e2);
+  box-shadow:
+    inset 0 1px 1px #fff3,
+    0 20px 40px #0005;
+  animation: modalIn 0.2s;
+}
+.popover::backdrop {
+  background: #0a141433;
+}
+.popover h3 {
+  font:
+    450 21px/1.2 var(--font-inter),
+    system-ui;
+  letter-spacing: -0.6px;
+  margin: 0 0 18px;
+}
+.popover p {
+  font-size: 12px;
+  color: var(--ui-muted, #b9b2a3);
+}
+.popover button {
+  margin-top: 8px;
+}
+.tooltipWrap {
+  display: inline-flex;
+  position: relative;
+}
+.tooltipButton {
+  display: grid;
+  place-items: center;
+  min-width: 54px;
+  min-height: 54px;
+  border: 0;
+  border-radius: 19px;
+  background: var(--ui-control, #30302e);
+  color: var(--ui-text, #f5f0e2);
+  box-shadow:
+    inset 0 1px 1px #fff2,
+    0 7px 12px #0002;
+  cursor: pointer;
+  font: 23px system-ui;
+}
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translate(-50%, 5px);
+  width: max-content;
+  max-width: 210px;
+  padding: 10px 15px;
+  background: var(--ui-text, #f5f0e2);
+  color: var(--ui-bg, #191919);
+  border-radius: 13px;
+  font: 11px/1.7 system-ui;
+  box-shadow: 0 8px 15px #0003;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.18s,
+    transform 0.18s;
+  pointer-events: none;
+  z-index: 5;
+}
+.tooltipOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+.dialog :is(button, input):focus-visible,
+.trigger:focus-visible,
+.popover button:focus-visible,
+.tooltipButton:focus-visible {
+  outline: 2px solid var(--ui-focus, #e8d6a9);
+  outline-offset: 4px;
+}
+.drawerNote {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 20px;
+  background: var(--ui-well, #222221);
+  border-radius: 20px;
+  margin-bottom: 22px;
+}
+.drawerNote span {
+  font-size: 24px;
+}
+.drawerNote p {
+  margin: 0;
+}
+.drawerList {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0;
+}
+.drawerList li {
+  padding: 13px 0;
+  color: var(--ui-muted, #b9b2a3);
+}
+.drawerList strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 450;
+  color: var(--ui-text, #f5f0e2);
+}
+.demoActions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.previewStatus {
+  font: 11px/1.8 system-ui;
+  color: var(--ui-muted, #b9b2a3);
+  text-align: center;
+  max-width: 270px;
+}
+.dialog [hidden] {
+  display: none;
+}
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    scale: 0.94;
+    translate: 0 12px;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+@keyframes drawerIn {
+  from {
+    opacity: 0.3;
+    translate: 40px 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@media (max-width: 380px) {
+  .dialog {
+    padding: 25px;
+  }
+  .dialog h2 {
+    font-size: 28px;
+  }
+  .confirmActions {
+    gap: 8px;
+  }
+  .confirmActions button {
+    padding: 10px 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dialog,
+  .drawer,
+  .popover {
+    animation: none;
+  }
+  .tooltip {
+    transition: none;
+  }
+}
+.dialog {
+  margin: auto;
+}
+.dialog.drawer {
+  margin: 16px 16px 16px auto;
+}
+.tooltip {
+  position: fixed;
+  bottom: auto;
+  left: auto;
+  width: 210px;
+  box-sizing: border-box;
+  transform: translateY(5px);
+}
+.tooltipOpen {
+  transform: translateY(0);
+}
+/* Additional hover content must remain reachable by the pointer. */
+.tooltipOpen {
+  pointer-events: auto;
+}
+.tooltip {
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+  overflow-wrap: anywhere;
+}

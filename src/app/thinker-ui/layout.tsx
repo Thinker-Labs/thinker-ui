@@ -1,0 +1,4 @@
+import './theme.css';
+import {ThemeRuntime} from './ThemeControls';
+const themeScript=`(()=>{const k='thinker-ui-theme',r=document.documentElement;function read(){try{const v=localStorage.getItem(k);return v==='light'||v==='dark'?v:null}catch{return null}}function apply(){r.dataset.thinkerTheme=read()||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');window.dispatchEvent(new Event('thinker-theme-change'))}apply();if(!window.__thinkerThemeReady){window.__thinkerThemeReady=true;matchMedia('(prefers-color-scheme: light)').addEventListener('change',()=>{if(!read())apply()});window.addEventListener('storage',e=>{if(e.key===k)apply()})}})();`;
+export default function ThinkerUILayout({children}:{children:React.ReactNode}){return <><script dangerouslySetInnerHTML={{__html:themeScript}}/><ThemeRuntime/>{children}</>}

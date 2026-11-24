@@ -1,0 +1,522 @@
+.composer,
+.plan,
+.agent,
+.receipt,
+.palette,
+.file,
+.timer,
+.reveal {
+  font: 13px/1.7 system-ui;
+  color: var(--ui-text, #eeeade);
+  max-width: 100%;
+  width: 420px;
+  box-sizing: border-box;
+}
+.composer {
+  padding: 26px;
+  border-radius: 29px;
+  background: var(--ui-control, #30302e);
+  box-shadow:
+    inset 1px 2px 2px #fff1,
+    0 8px 0 #0002,
+    0 22px 30px #0003;
+}
+.composer label {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+.composer textarea {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  min-height: 110px;
+  resize: vertical;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: 13px/1.9 system-ui;
+  margin-top: 20px;
+  padding: 5px 0;
+}
+.composer textarea::placeholder {
+  color: var(--ui-muted, #aaa49a);
+}
+.composer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 16px;
+}
+.composer > div > span {
+  font-size: 10px;
+  color: var(--ui-muted, #aaa49a);
+}
+.composer button,
+.agent button,
+.receipt button,
+.file > button,
+.timer button,
+.reveal button {
+  border: 0;
+  border-radius: 25px;
+  padding: 12px 19px;
+  background: linear-gradient(145deg, #f4eedf, #c8bea6);
+  color: #343127;
+  box-shadow:
+    0 3px 0 #8c826b,
+    0 8px 12px #0003;
+  min-height: 44px;
+  font: 12px system-ui;
+  cursor: pointer;
+}
+.composer button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.plan {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 360px;
+}
+.plan legend {
+  font-size: 19px;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+.plan label {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: var(--ui-well, #222221);
+  border-radius: 20px;
+  padding: 18px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.plan input {
+  position: absolute;
+  left: 18px;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.stepNumber {
+  display: grid;
+  place-items: center;
+  background: var(--ui-control, #30302e);
+  width: 35px;
+  height: 35px;
+  flex: none;
+  border-radius: 50%;
+  color: var(--ui-muted, #aaa49a);
+}
+.plan input:checked + .stepNumber {
+  background: #bfb398;
+  color: #343127;
+  box-shadow:
+    inset 1px 2px 2px #fffc,
+    0 4px 6px #0002;
+}
+.plan input:focus-visible + .stepNumber {
+  outline: 2px solid var(--ui-focus, #e8d9b5);
+  outline-offset: 4px;
+}
+.plan strong {
+  display: block;
+  font-weight: 500;
+}
+.plan small,
+.plan p {
+  font-size: 11px;
+  color: var(--ui-muted, #aaa49a);
+  margin: 3px 0 0;
+}
+.plan p {
+  text-align: center;
+  margin-top: 20px;
+}
+.agent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 28px;
+  background: var(--ui-well, #222221);
+  border-radius: 28px;
+  box-shadow: 0 10px 25px #0002;
+}
+.agent > div[role="status"] {
+  flex: 1;
+  min-width: 160px;
+}
+.agent strong {
+  font-weight: 500;
+  font-size: 16px;
+}
+.agent p {
+  font-size: 11px;
+  color: var(--ui-muted, #aaa49a);
+  margin: 7px 0 0;
+}
+.agent button {
+  margin-left: auto;
+}
+.orb {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f4edda, #afa182);
+  box-shadow:
+    inset 2px 3px 3px #fff9,
+    0 5px 0 #776e5a,
+    0 12px 15px #0004;
+  flex: none;
+}
+.orb span {
+  width: 5px;
+  height: 16px;
+  border-radius: 10px;
+  background: #5a5545;
+}
+.orb.working span {
+  animation: wave 1.2s ease-in-out infinite;
+}
+.orb.working span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.orb.working span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.receipt {
+  width: 350px;
+  padding: 28px;
+  border-radius: 23px;
+  background: linear-gradient(145deg, #f4efdf, #d0c7b2);
+  color: #38352d;
+  box-shadow:
+    inset 1px 2px 2px #ffff,
+    0 7px 0 #a49a82,
+    0 24px 24px -9px #0005;
+  transform: rotate(-2deg);
+}
+.receiptHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #77715f;
+}
+.receiptHeader > span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #b3b59a55;
+  color: #686d49;
+}
+.receipt h3 {
+  font: 24px/1.2 system-ui;
+  letter-spacing: -1px;
+  color: #38352d !important;
+  margin: 22px 0;
+}
+.receipt ul {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 25px;
+}
+.receipt li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 17px 0;
+  font-size: 12px;
+}
+.receipt li small {
+  margin-left: auto;
+  font-size: 10px;
+  color: #726c5d;
+}
+.receipt button {
+  width: 100%;
+  background: #393b32;
+  color: #ede9dd;
+  box-shadow: 0 3px 0 #181a14;
+}
+.palette {
+  padding: 20px;
+  background: var(--ui-control, #30302e);
+  border-radius: 25px;
+  box-shadow: 0 20px 35px #0003;
+}
+.palette label {
+  display: block;
+  font-size: 11px;
+  color: var(--ui-muted, #aaa49a);
+  margin: 0 5px 14px;
+}
+.palette input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+  border-radius: 16px;
+  background: var(--ui-well, #222221);
+  color: inherit;
+  padding: 17px;
+  font: 13px system-ui;
+  min-height: 48px;
+}
+.commands {
+  margin-top: 12px;
+}
+.commands button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px;
+  background: transparent;
+  color: inherit;
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  text-align: left;
+  font: 13px system-ui;
+  cursor: pointer;
+  min-height: 62px;
+}
+.commands button:hover,
+.commands button:focus-visible {
+  background: var(--ui-well, #222221);
+}
+.commands small {
+  display: block;
+  font-size: 10px;
+  color: var(--ui-muted, #aaa49a);
+  margin-top: 6px;
+}
+.commands > p {
+  font-size: 12px;
+  color: var(--ui-muted, #aaa49a);
+  padding: 15px;
+}
+.file {
+  width: 350px;
+  text-align: center;
+}
+.drop {
+  position: relative;
+  background: var(--ui-control, #30302e);
+  border-radius: 28px;
+  padding: 30px 22px;
+  box-shadow:
+    inset 1px 2px 2px #fff1,
+    0 10px 22px #0002;
+}
+.fileIcon {
+  font-size: 28px;
+  border-radius: 20px;
+  background: var(--ui-well, #222221);
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 70px;
+  margin: 0 auto 23px;
+  transform: rotate(-7deg);
+  box-shadow: 0 5px 0 #0002;
+}
+.drop label {
+  display: block;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
+}
+.drop p,
+.file > p {
+  font-size: 10px;
+  color: var(--ui-muted, #aaa49a);
+  margin: 12px 0;
+}
+.drop input {
+  max-width: 100%;
+  font: 11px system-ui;
+  margin-top: 12px;
+  color: var(--ui-muted, #aaa49a);
+}
+.drop input::file-selector-button {
+  border: 0;
+  border-radius: 20px;
+  background: var(--ui-well, #222221);
+  color: var(--ui-text, #eeeade);
+  padding: 12px 15px;
+  cursor: pointer;
+  min-height: 42px;
+  margin-right: 10px;
+}
+.file > button {
+  margin-top: 20px;
+}
+.timer {
+  width: 330px;
+  text-align: center;
+  padding: 35px;
+  background: var(--ui-well, #222221);
+  border-radius: 35px;
+  box-shadow:
+    0 13px 0 #0002,
+    0 25px 35px #0002;
+}
+.timer > p {
+  font-size: 12px;
+  color: var(--ui-muted, #aaa49a);
+  margin: 0 0 22px;
+}
+.timer output {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 65px;
+  letter-spacing: -4px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 300;
+  line-height: 1.3;
+}
+.timer output i {
+  opacity: 0.3;
+  font-style: normal;
+}
+.timer > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 23px;
+}
+.timer button:last-child {
+  background: var(--ui-control, #30302e);
+  color: var(--ui-text, #eeeade);
+  box-shadow: 0 3px 0 #0003;
+}
+.timer small {
+  display: block;
+  margin-top: 25px;
+  font-size: 10px;
+  color: var(--ui-muted, #aaa49a);
+}
+.sr {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.reveal {
+  width: 330px;
+  padding: 28px;
+  background: var(--ui-control, #30302e);
+  border-radius: 29px;
+  box-shadow:
+    inset 1px 2px 2px #fff1,
+    0 6px 0 #0002,
+    0 18px 28px #0003;
+  transition: transform 0.5s;
+}
+.reveal h3 {
+  font: 24px/1.2 system-ui;
+  letter-spacing: -0.7px;
+  margin: 28px 0 13px;
+}
+.reveal > p,
+.revealContent {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--ui-muted, #aaa49a);
+}
+.revealArt {
+  position: relative;
+  height: 85px;
+  perspective: 300px;
+}
+.revealArt i {
+  position: absolute;
+  left: 40%;
+  top: 10px;
+  width: 64px;
+  height: 75px;
+  background: linear-gradient(135deg, #e8dfcb, #aca086);
+  border-radius: 15px;
+  box-shadow:
+    inset 1px 2px 2px #fffa,
+    0 12px 15px #0003;
+  transform: rotate(-14deg);
+  transition: transform 0.7s cubic-bezier(0.2, 1.4, 0.3, 1);
+}
+.revealArt i:nth-child(2) {
+  left: 20%;
+  transform: rotate(-27deg);
+  background: var(--ui-material-top, #646462);
+}
+.revealArt i:nth-child(3) {
+  left: 55%;
+  transform: rotate(23deg);
+}
+.revealed .revealArt i:first-child {
+  transform: translateY(-10px) rotate(0);
+}
+.revealed .revealArt i:nth-child(2) {
+  transform: translateX(-15px) rotate(-36deg);
+}
+.revealed .revealArt i:nth-child(3) {
+  transform: translateX(15px) rotate(36deg);
+}
+.reveal button {
+  margin-top: 8px;
+  box-shadow:
+    0 3px 0 #8c826b,
+    0 6px 9px #0002;
+}
+.revealContent {
+  padding-top: 22px;
+}
+.revealContent[hidden] {
+  display: none;
+}
+.composer textarea:focus-visible,
+.composer button:focus-visible,
+.agent button:focus-visible,
+.receipt button:focus-visible,
+.palette input:focus-visible,
+.commands button:focus-visible,
+.file input:focus-visible,
+.file > button:focus-visible,
+.timer button:focus-visible,
+.reveal button:focus-visible {
+  outline: 2px solid var(--ui-focus, #e8d9b5);
+  outline-offset: 5px;
+}
+@keyframes wave {
+  50% {
+    height: 7px;
+    opacity: 0.5;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orb.working span {
+    animation: none;
+  }
+  .reveal,
+  .revealArt i {
+    transition: none;
+  }
+}

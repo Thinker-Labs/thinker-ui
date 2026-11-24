@@ -1,0 +1,362 @@
+.searchChoices,
+.calendar,
+.tableWrap {
+  font:
+    14px/1.6 var(--font-inter),
+    system-ui;
+  color: var(--ui-text, #f5f0e2);
+  box-sizing: border-box;
+  background: linear-gradient(
+    140deg,
+    var(--ui-material-top, #55554f),
+    var(--ui-control, #30302e) 80%
+  );
+  box-shadow:
+    inset 0 1px 1px #fff3,
+    0 16px 35px #0003;
+  border-radius: 29px;
+  width: 370px;
+  max-width: 100%;
+  padding: 25px;
+}
+.searchChoices label {
+  display: block;
+  font-size: 20px;
+  letter-spacing: -0.7px;
+  margin-bottom: 20px;
+}
+.searchField {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 15px;
+  background: var(--ui-well, #222221);
+  border-radius: 16px;
+}
+.searchField span {
+  font-size: 24px;
+  color: var(--ui-muted, #b9b2a3);
+}
+.searchField input {
+  font: 13px system-ui;
+  min-width: 0;
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  outline-offset: 5px;
+}
+.resultCount {
+  font-size: 11px;
+  color: var(--ui-muted, #b9b2a3);
+  margin: 12px 0;
+}
+.choiceList {
+  display: grid;
+  gap: 8px;
+  max-height: 330px;
+  overflow: auto;
+  padding: 4px;
+}
+.choiceList button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px;
+  border: 0;
+  min-height: 65px;
+  width: 100%;
+  text-align: left;
+  color: inherit;
+  background: var(--ui-well, #222221);
+  border-radius: 17px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.choiceList button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #f5efdf, #c5bda6);
+  color: #34332a;
+  box-shadow: 0 3px 0 #9b9077;
+}
+.choiceList strong {
+  display: block;
+  font: 450 13px system-ui;
+}
+.choiceList small {
+  display: block;
+  font: 11px/1.5 system-ui;
+  opacity: 0.75;
+  margin-top: 5px;
+}
+.choiceCheck {
+  margin-left: auto;
+}
+.swatch {
+  width: 35px;
+  height: 38px;
+  flex: none;
+  background: linear-gradient(140deg, #53534f, #212220);
+  border-radius: 12px;
+  box-shadow:
+    inset 1px 1px 1px #fff5,
+    0 4px 7px #0003;
+  transform: rotate(-5deg);
+}
+.swatch[data-material="limestone"] {
+  background: linear-gradient(140deg, #f5efdf, #b8b098);
+}
+.swatch[data-material="clay"] {
+  background: linear-gradient(140deg, #c7a890, #806752);
+}
+.swatch[data-material="linen"] {
+  background: repeating-linear-gradient(
+    40deg,
+    #e4d5b7,
+    #c5b99e 2px,
+    #e4d5b7 4px
+  );
+}
+.noResults {
+  font-size: 12px;
+  color: var(--ui-muted, #b9b2a3);
+  padding: 16px 0;
+}
+.calendar {
+  padding: 25px;
+  width: 370px;
+}
+.calendarTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 23px;
+}
+.calendarTop span {
+  font-size: 11px;
+  color: var(--ui-muted, #b9b2a3);
+}
+.calendarTop h3 {
+  font:
+    450 22px/1.3 var(--font-inter),
+    system-ui;
+  letter-spacing: -0.8px;
+  margin: 5px 0 0;
+}
+.calendarTop > div:last-child {
+  display: flex;
+  gap: 6px;
+}
+.calendarTop button {
+  border: 0;
+  width: 40px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--ui-well, #222221);
+  color: inherit;
+  cursor: pointer;
+}
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+}
+.weekday {
+  font: 10px/2 system-ui;
+  color: var(--ui-muted, #b9b2a3);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.calendarGrid button {
+  border: 0;
+  min-width: 0;
+  aspect-ratio: 1;
+  min-height: 35px;
+  padding: 0;
+  border-radius: 13px;
+  font: 12px system-ui;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background 0.16s,
+    box-shadow 0.16s;
+}
+.calendarGrid button:hover {
+  background: var(--ui-well, #222221);
+}
+.calendarGrid button[aria-pressed="true"] {
+  background: linear-gradient(140deg, #f5efdf, #c5bda6);
+  color: #34332a;
+  box-shadow:
+    inset 0 1px 1px #fff8,
+    0 3px 0 #948973;
+}
+.calendarSelection {
+  font: 11px system-ui;
+  text-align: center;
+  margin: 24px 0 0;
+  color: var(--ui-muted, #b9b2a3);
+}
+.tableWrap {
+  width: 640px;
+  overflow: auto;
+  padding: 25px;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 430px;
+  font: 12px/1.6 system-ui;
+  text-align: left;
+}
+.table caption {
+  text-align: left;
+  font:
+    450 22px/1.3 var(--font-inter),
+    system-ui;
+  letter-spacing: -0.6px;
+  margin-bottom: 26px;
+  color: var(--ui-text, #f5f0e2);
+}
+.table caption span {
+  display: block;
+  font: 11px/1.5 system-ui;
+  letter-spacing: 0;
+  margin-top: 8px;
+  color: var(--ui-muted, #b9b2a3);
+}
+.table th,
+.table td {
+  padding: 15px 12px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.table thead th {
+  font-size: 11px;
+  color: var(--ui-muted, #b9b2a3);
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+.table thead button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  min-height: 36px;
+}
+.table thead button span {
+  margin-left: 8px;
+}
+.table tbody tr {
+  background: var(--ui-well, #222221);
+}
+.table tbody tr:nth-child(even) {
+  background: transparent;
+}
+.table tbody th:first-child {
+  border-radius: 13px 0 0 13px;
+}
+.table tbody td:last-child {
+  border-radius: 0 13px 13px 0;
+}
+.progressValue {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.progressValue i {
+  display: block;
+  width: 55px;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    #c8b88f var(--progress),
+    var(--ui-control, #30302e) var(--progress)
+  );
+  border-radius: 4px;
+}
+.searchChoices :is(input, button):focus-visible,
+.calendar button:focus-visible,
+.tableWrap:focus-visible,
+.table button:focus-visible {
+  outline: 2px solid var(--ui-focus, #e8d6a9);
+  outline-offset: 3px;
+}
+.demoStatus {
+  font: 11px/1.8 system-ui;
+  text-align: center;
+  max-width: 340px;
+  color: var(--ui-muted, #b9b2a3);
+}
+@media (max-width: 390px) {
+  .searchChoices,
+  .calendar,
+  .tableWrap {
+    padding: 18px;
+    border-radius: 24px;
+  }
+  .calendarTop h3 {
+    font-size: 19px;
+  }
+  .calendarTop button {
+    width: 34px;
+  }
+  .calendarGrid {
+    gap: 2px;
+  }
+  .calendarGrid button {
+    min-height: 29px;
+    border-radius: 10px;
+  }
+  .tableWrap {
+    max-width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .choiceList button,
+  .calendarGrid button {
+    transition: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .calendarTop h3 {
+    font-size: 17px;
+    letter-spacing: -0.7px;
+    white-space: nowrap;
+  }
+  .calendarTop {
+    gap: 7px;
+  }
+  .calendarTop > div:last-child {
+    gap: 4px;
+  }
+  .calendarTop button {
+    width: 29px;
+    min-width: 29px;
+  }
+  .calendar {
+    padding: 16px;
+  }
+}
+
+.exampleDate {
+  font: 11px system-ui;
+  color: var(--ui-text, #f5f0e2);
+  background: var(--ui-control, #30302e);
+  border: 0;
+  min-height: 44px;
+  border-radius: 22px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.exampleDate:focus-visible {
+  outline: 2px solid var(--ui-focus, #e8d6a9);
+  outline-offset: 4px;
+}

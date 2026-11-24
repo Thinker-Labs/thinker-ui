@@ -1,0 +1,417 @@
+.gallery,
+.focusImage {
+  font:
+    13px/1.7 var(--font-inter),
+    system-ui;
+  color: var(--ui-text, #f5f0e2);
+  width: 640px;
+  max-width: 100%;
+  margin: 0;
+}
+.gallery {
+  padding: 14px;
+  border-radius: 30px;
+  background: var(--ui-control, #30302e);
+  box-shadow:
+    inset 0 1px 1px #fff3,
+    0 18px 35px #0003;
+  box-sizing: border-box;
+}
+.sceneFrame {
+  position: relative;
+  aspect-ratio: 1.65;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #3b403b;
+}
+.sceneImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: sceneArrive 0.75s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.frameIndex {
+  position: absolute;
+  left: 17px;
+  bottom: 17px;
+  background: #15202066;
+  backdrop-filter: blur(15px);
+  color: #fff5e0;
+  font: 10px system-ui;
+  padding: 9px 13px;
+  border-radius: 18px;
+  box-shadow: inset 0 1px 1px #fff3;
+}
+.sceneMeta {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 12px 20px;
+}
+.sceneMeta h3 {
+  font:
+    430 24px/1.2 var(--font-inter),
+    system-ui;
+  letter-spacing: -0.9px;
+  margin: 0 0 9px;
+}
+.sceneMeta p {
+  font: 12px/1.8 system-ui;
+  color: var(--ui-muted, #b9b2a3);
+  max-width: 330px;
+  margin: 0;
+}
+.sceneArrows {
+  display: flex;
+  gap: 7px;
+  flex: none;
+}
+.sceneArrows button {
+  width: 42px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 15px;
+  background: var(--ui-well, #222221);
+  color: inherit;
+  cursor: pointer;
+  font: 15px system-ui;
+}
+.sceneArrows button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0 5px 5px;
+}
+.thumbnails button {
+  min-width: 0;
+  border: 0;
+  padding: 5px;
+  background: transparent;
+  color: var(--ui-muted, #b9b2a3);
+  border-radius: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.thumbnails button[aria-pressed="true"] {
+  background: var(--ui-well, #222221);
+  color: var(--ui-text, #f5f0e2);
+}
+.thumbnails img {
+  width: 100%;
+  aspect-ratio: 2;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.thumbnails button[aria-pressed="true"] img {
+  opacity: 1;
+}
+.thumbnails span {
+  font: 10px/1.5 system-ui;
+  display: block;
+  padding: 9px 4px 5px;
+}
+.focusImage {
+  width: 500px;
+}
+.imageTrigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.imageTrigger img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.4;
+  object-fit: cover;
+  transition: scale 0.8s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.imageTrigger:hover img {
+  scale: 1.05;
+}
+.imageTrigger > span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff5e0;
+  background: #14201b55;
+  backdrop-filter: blur(20px);
+  padding: 15px 20px;
+  border-radius: 20px;
+  font: 12px system-ui;
+  box-shadow: inset 0 1px 1px #fff4;
+}
+.focusImage figcaption {
+  font: 11px/1.8 system-ui;
+  color: var(--ui-muted, #b9b2a3);
+  padding: 16px 8px 0;
+}
+.viewer {
+  box-sizing: border-box;
+  width: 1000px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: 20px;
+  border: 0;
+  margin: auto;
+  border-radius: 27px;
+  color: var(--ui-text, #f5f0e2);
+  background: var(--ui-control, #30302e);
+  box-shadow:
+    inset 0 1px 1px #fff3,
+    0 35px 80px #0006;
+  overflow: auto;
+}
+.viewer::backdrop {
+  background: #101917bb;
+  backdrop-filter: blur(15px);
+}
+.viewerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.viewerTop h3 {
+  font:
+    430 20px var(--font-inter),
+    system-ui;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+.viewerTop > div {
+  display: flex;
+  gap: 8px;
+}
+.viewerTop button {
+  border: 0;
+  background: var(--ui-well, #222221);
+  color: inherit;
+  border-radius: 15px;
+  padding: 0 17px;
+  min-height: 44px;
+  cursor: pointer;
+  font: 11px system-ui;
+}
+.viewerTop button:last-child {
+  font-size: 22px;
+  width: 44px;
+  padding: 0;
+}
+.viewerCanvas {
+  max-height: calc(100dvh - 220px);
+  overflow: auto;
+  border-radius: 15px;
+  background: var(--ui-well, #222221);
+}
+.viewerCanvas img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 220px);
+  object-fit: contain;
+}
+.viewerCanvas img.zoomed {
+  width: 160%;
+  max-width: none;
+  max-height: none;
+}
+.viewer > p {
+  font: 11px/1.7 system-ui;
+  color: var(--ui-muted, #b9b2a3);
+  margin: 15px 0 0;
+}
+.kineticWrap {
+  display: inline-grid;
+  padding: 20px;
+}
+.kineticButton {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  font: 14px system-ui;
+  min-height: 66px;
+  padding: 20px 28px;
+  border: 0;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #faf3df, #c7b997);
+  color: #3b372b;
+  box-shadow:
+    inset 0 2px 2px #fff9,
+    0 5px 0 #9b8c6c,
+    0 15px 22px #0003;
+  transform: translate(var(--kinetic-x), var(--kinetic-y))
+    rotate(var(--kinetic-rotate));
+  transition:
+    transform 0.35s cubic-bezier(0.15, 1.5, 0.3, 1),
+    box-shadow 0.2s;
+  cursor: pointer;
+}
+.kineticArrow {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background: #fff5;
+  border-radius: 50%;
+  font-size: 17px;
+}
+.kineticButton:active {
+  box-shadow:
+    inset 0 1px 2px #fff9,
+    0 1px 0 #9b8c6c,
+    0 6px 10px #0002;
+  translate: 0 4px;
+}
+.kineticButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.gallery button:focus-visible,
+.imageTrigger:focus-visible,
+.viewer :is(button, [tabindex]):focus-visible,
+.kineticButton:focus-visible {
+  outline: 2px solid var(--ui-focus, #e8d6a9);
+  outline-offset: 4px;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.demoNote {
+  font: 11px/1.8 system-ui;
+  color: var(--ui-muted, #b9b2a3);
+  max-width: 340px;
+  text-align: center;
+}
+.demoNote button {
+  border: 0;
+  min-height: 44px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+@keyframes sceneArrive {
+  from {
+    opacity: 0.25;
+    scale: 1.07;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    filter: blur(0);
+  }
+}
+@media (max-width: 450px) {
+  .gallery {
+    padding: 10px;
+    border-radius: 24px;
+  }
+  .sceneFrame {
+    aspect-ratio: 1.12;
+    border-radius: 16px;
+  }
+  .sceneMeta {
+    padding: 20px 7px 16px;
+    gap: 12px;
+  }
+  .sceneMeta h3 {
+    font-size: 20px;
+  }
+  .sceneMeta p {
+    font-size: 11px;
+  }
+  .sceneArrows {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .sceneArrows button {
+    width: 44px;
+    min-height: 44px;
+  }
+  .thumbnails {
+    gap: 4px;
+    padding: 0;
+  }
+  .thumbnails span {
+    font-size: 9px;
+    padding: 8px 1px 2px;
+  }
+  .thumbnails button {
+    padding: 4px;
+  }
+  .viewer {
+    padding: 14px;
+    border-radius: 23px;
+  }
+  .viewerTop h3 {
+    font-size: 16px;
+  }
+  .viewerTop button {
+    padding: 0 11px;
+  }
+  .kineticWrap {
+    padding: 15px 8px;
+  }
+  .kineticButton {
+    gap: 30px;
+    font-size: 12px;
+    padding: 17px 20px;
+  }
+  .imageTrigger > span {
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    padding: 12px 16px;
+  }
+  .viewerTop {
+    gap: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sceneImage {
+    animation: none;
+  }
+  .thumbnails img,
+  .thumbnails button,
+  .imageTrigger img,
+  .kineticButton {
+    transition: none;
+  }
+  .kineticButton {
+    transform: none;
+  }
+  .imageTrigger:hover img {
+    scale: 1;
+  }
+}

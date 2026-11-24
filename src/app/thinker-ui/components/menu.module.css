@@ -1,0 +1,181 @@
+.menu {
+  width: 290px;
+  max-width: 100%;
+  padding: 13px;
+  border-radius: 29px;
+  color: #eeeade;
+  background:
+    radial-gradient(ellipse at 5% 0, #bbb9b24d, transparent 60%),
+    linear-gradient(135deg, #636361, #373736 60%, #292928);
+  box-shadow:
+    inset 2px 2px 2px #dddbd180,
+    inset -1px -2px 2px #b5b3ab33,
+    -4px 4px 0 #525251,
+    -8px 8px 0 #282827,
+    0 25px 15px -5px #000b;
+  font:
+    14px/1.4 system-ui,
+    sans-serif;
+}
+.trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #c7c2b6;
+  font: inherit;
+  font-size: 12px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 18px;
+  text-align: left;
+  min-height: 44px;
+}
+.trigger svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  transition: transform 0.3s;
+}
+.trigger .open {
+  transform: rotate(180deg);
+}
+.trigger:hover {
+  color: #fff9eb;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  transform-origin: top;
+  animation: unfold 0.35s cubic-bezier(0.18, 1.2, 0.3, 1);
+}
+.options[hidden] {
+  display: none;
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  border: 0;
+  border-radius: 19px;
+  min-height: 63px;
+  padding: 12px;
+  background: transparent;
+  color: #e2ddd2;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    transform 0.35s cubic-bezier(0.2, 1.5, 0.3, 1);
+}
+.option[aria-pressed="true"] {
+  background: linear-gradient(120deg, #a6a49c88, #72726d77);
+  box-shadow:
+    inset 1px 1px 2px #fff5,
+    0 4px 6px #0003;
+}
+.option:hover {
+  background-color: #fff1;
+  transform: translateX(2px);
+}
+.option:active {
+  transform: scale(0.98);
+}
+.trigger:focus-visible,
+.option:focus-visible {
+  outline: 2px solid #e8d9b5;
+  outline-offset: 3px;
+}
+.icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 23px;
+  height: 23px;
+}
+.icon svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.6;
+}
+.name {
+  display: block;
+  font-size: 13px;
+}
+.description {
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #b5b0a4;
+  margin-top: 3px;
+}
+.check {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  margin-left: auto;
+}
+@keyframes unfold {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scaleY(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trigger svg,
+  .option {
+    transition: none;
+  }
+  .options {
+    animation: none;
+  }
+  .option:hover,
+  .option:active {
+    transform: none;
+  }
+}
+.menu {
+  color: var(--ui-material-ink, #eeeade);
+  background:
+    radial-gradient(ellipse at 5% 0, #ffffff28, transparent 60%),
+    linear-gradient(
+      135deg,
+      var(--ui-material-top, #636361),
+      var(--ui-material-bottom, #292928)
+    );
+}
+.trigger,
+.description {
+  color: var(--ui-material-muted, #b5b0a4);
+}
+.option {
+  color: var(--ui-material-ink, #e2ddd2);
+}
+.option[aria-pressed="true"] {
+  background: linear-gradient(
+    120deg,
+    var(--ui-material-active, #a6a49c88),
+    #72726d33
+  );
+}
+.trigger:hover {
+  color: var(--ui-material-ink, #fff9eb);
+}
+.trigger:focus-visible,
+.option:focus-visible {
+  outline-color: var(--ui-focus, #e8d9b5);
+}

@@ -1,0 +1,1662 @@
+{
+  "settling-text": {
+    "exportName": "SettlingText",
+    "props": [
+      {
+        "name": "text",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "as",
+        "required": false,
+        "type": "\"p\" | \"h2\" | \"h3\""
+      },
+      {
+        "name": "effect",
+        "required": false,
+        "type": "\"rise\" | \"soft\""
+      },
+      {
+        "name": "pace",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "switch": {
+    "exportName": "MaterialSwitch",
+    "props": [
+      {
+        "name": "checked",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(checked: boolean) => void"
+      },
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "buttons": {
+    "exportName": "MaterialButton",
+    "props": [
+      {
+        "name": "children",
+        "required": true,
+        "type": "React.ReactNode"
+      },
+      {
+        "name": "onClick",
+        "required": false,
+        "type": "(() => void)"
+      },
+      {
+        "name": "disabled",
+        "required": false,
+        "type": "boolean"
+      },
+      {
+        "name": "busy",
+        "required": false,
+        "type": "boolean"
+      },
+      {
+        "name": "variant",
+        "required": false,
+        "type": "\"ivory\" | \"graphite\""
+      }
+    ]
+  },
+  "input": {
+    "exportName": "MaterialInput",
+    "props": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(v: string) => void"
+      },
+      {
+        "name": "placeholder",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "error",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "maxLength",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "tabs": {
+    "exportName": "MaterialTabs",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "{ id: string; label: string; content: React.ReactNode; }[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(v: string) => void"
+      },
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "dock": {
+    "exportName": "MaterialDock",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "DockItem[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "menu": {
+    "exportName": "MaterialMenu",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "MenuItem[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "title",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "toast": {
+    "exportName": "MaterialToast",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "onDismiss",
+        "required": true,
+        "type": "() => void"
+      }
+    ]
+  },
+  "checkbox": {
+    "exportName": "MaterialCheckbox",
+    "props": [
+      {
+        "name": "checked",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: boolean) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "disabled",
+        "required": false,
+        "type": "boolean"
+      }
+    ]
+  },
+  "choices": {
+    "exportName": "ChoiceCards",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "{ id: string; label: string; description: string; }[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "slider": {
+    "exportName": "MaterialSlider",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: number) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "min",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "step",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "unit",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "stepper": {
+    "exportName": "QuantityStepper",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: number) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "min",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "select": {
+    "exportName": "MaterialSelect",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "items",
+        "required": true,
+        "type": "{ id: string; label: string; }[]"
+      }
+    ]
+  },
+  "note": {
+    "exportName": "NoteField",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "maxLength",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "tags": {
+    "exportName": "TagPicker",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string[]) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "max",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "rating": {
+    "exportName": "RatingControl",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: number) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "max",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "accordion": {
+    "exportName": "SoftAccordion",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "{ id: string; title: string; content: React.ReactNode; }[]"
+      }
+    ]
+  },
+  "ring": {
+    "exportName": "ProgressRing",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "meter": {
+    "exportName": "StorageMeter",
+    "props": [
+      {
+        "name": "used",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "total",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "unit",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "empty": {
+    "exportName": "EmptyState",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "action",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onAction",
+        "required": true,
+        "type": "() => void"
+      }
+    ]
+  },
+  "skeleton": {
+    "exportName": "LoadingSkeleton",
+    "props": [
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "notice": {
+    "exportName": "InlineNotice",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "tone",
+        "required": false,
+        "type": "\"neutral\" | \"success\" | \"warning\""
+      },
+      {
+        "name": "onDismiss",
+        "required": false,
+        "type": "(() => void)"
+      }
+    ]
+  },
+  "snippet": {
+    "exportName": "CopySnippet",
+    "props": [
+      {
+        "name": "text",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "breadcrumbs": {
+    "exportName": "BreadcrumbTrail",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "{ label: string; href?: string; }[]"
+      }
+    ]
+  },
+  "pagination": {
+    "exportName": "PageControl",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(page: number) => void"
+      },
+      {
+        "name": "total",
+        "required": true,
+        "type": "number"
+      }
+    ]
+  },
+  "composer": {
+    "exportName": "ChatComposer",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "onSubmit",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "busy",
+        "required": false,
+        "type": "boolean"
+      }
+    ]
+  },
+  "plan": {
+    "exportName": "PlanSteps",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "{ id: string; label: string; description: string; }[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string[]) => void"
+      }
+    ]
+  },
+  "agent": {
+    "exportName": "AgentState",
+    "props": [
+      {
+        "name": "state",
+        "required": true,
+        "type": "\"working\" | \"paused\" | \"ready\""
+      },
+      {
+        "name": "message",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onPause",
+        "required": true,
+        "type": "() => void"
+      },
+      {
+        "name": "onResume",
+        "required": true,
+        "type": "() => void"
+      }
+    ]
+  },
+  "receipt": {
+    "exportName": "CheckReceipt",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "checks",
+        "required": true,
+        "type": "{ label: string; passed: boolean; }[]"
+      },
+      {
+        "name": "onInspect",
+        "required": true,
+        "type": "() => void"
+      }
+    ]
+  },
+  "commands": {
+    "exportName": "CommandPalette",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "{ id: string; label: string; hint: string; }[]"
+      },
+      {
+        "name": "onSelect",
+        "required": true,
+        "type": "(id: string) => void"
+      }
+    ]
+  },
+  "file": {
+    "exportName": "FileDropzone",
+    "props": [
+      {
+        "name": "file",
+        "required": true,
+        "type": "File | null"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(file: File | null) => void"
+      },
+      {
+        "name": "accept",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "maxBytes",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "timer": {
+    "exportName": "FocusTimer",
+    "props": [
+      {
+        "name": "seconds",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(seconds: number) => void"
+      }
+    ]
+  },
+  "reveal": {
+    "exportName": "RevealCard",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "summary",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "React.ReactNode"
+      }
+    ]
+  },
+  "idea-object": {
+    "exportName": "IdeaObject",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "tags",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "progress",
+        "required": true,
+        "type": "number"
+      }
+    ]
+  },
+  "thought-deck": {
+    "exportName": "ThoughtDeck",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "DeckItem[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(id: string) => void"
+      }
+    ]
+  },
+  "material-compare": {
+    "exportName": "MaterialCompare",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: number) => void"
+      },
+      {
+        "name": "beforeLabel",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "afterLabel",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "before",
+        "required": true,
+        "type": "ReactNode"
+      },
+      {
+        "name": "after",
+        "required": true,
+        "type": "ReactNode"
+      }
+    ]
+  },
+  "activity-capsule": {
+    "exportName": "ActivityCapsule",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "detail",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "expanded",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "onExpandedChange",
+        "required": true,
+        "type": "(open: boolean) => void"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "ReactNode"
+      }
+    ]
+  },
+  "story-reel": {
+    "exportName": "StoryReel",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "ReelItem[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(id: string) => void"
+      }
+    ]
+  },
+  "detail-surface": {
+    "exportName": "DetailSurface",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "summary",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "ReactNode"
+      }
+    ]
+  },
+  "material-dialog": {
+    "exportName": "MaterialDialog",
+    "props": [
+      {
+        "name": "open",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "onOpenChange",
+        "required": true,
+        "type": "(open: boolean) => void"
+      },
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "ReactNode"
+      },
+      {
+        "name": "side",
+        "required": false,
+        "type": "\"center\" | \"right\""
+      }
+    ]
+  },
+  "material-drawer": {
+    "exportName": "MaterialDialog",
+    "props": [
+      {
+        "name": "open",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "onOpenChange",
+        "required": true,
+        "type": "(open: boolean) => void"
+      },
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "ReactNode"
+      },
+      {
+        "name": "side",
+        "required": false,
+        "type": "\"center\" | \"right\""
+      }
+    ]
+  },
+  "confirm-action": {
+    "exportName": "ConfirmAction",
+    "props": [
+      {
+        "name": "open",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "onOpenChange",
+        "required": true,
+        "type": "(open: boolean) => void"
+      },
+      {
+        "name": "onConfirm",
+        "required": true,
+        "type": "() => void"
+      },
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "confirmLabel",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "material-popover": {
+    "exportName": "MaterialPopover",
+    "props": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "ReactNode"
+      }
+    ]
+  },
+  "quiet-tooltip": {
+    "exportName": "QuietTooltip",
+    "props": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "tip",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "ReactNode"
+      }
+    ]
+  },
+  "search-choices": {
+    "exportName": "SearchChoices",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "ChoiceItem[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "material-calendar": {
+    "exportName": "MaterialCalendar",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "material-table": {
+    "exportName": "MaterialTable",
+    "props": [
+      {
+        "name": "rows",
+        "required": true,
+        "type": "TableRow[]"
+      },
+      {
+        "name": "caption",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "scene-gallery": {
+    "exportName": "SceneGallery",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "Scene[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(id: string) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "focus-image": {
+    "exportName": "FocusImage",
+    "props": [
+      {
+        "name": "src",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "alt",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "caption",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "kinetic-button": {
+    "exportName": "KineticButton",
+    "props": [
+      {
+        "name": "children",
+        "required": true,
+        "type": "ReactNode"
+      },
+      {
+        "name": "onClick",
+        "required": true,
+        "type": "() => void"
+      },
+      {
+        "name": "disabled",
+        "required": false,
+        "type": "boolean"
+      }
+    ]
+  },
+  "scroll-reveal": {
+    "exportName": "ScrollReveal",
+    "props": [
+      {
+        "name": "children",
+        "required": true,
+        "type": "React.ReactNode"
+      },
+      {
+        "name": "delay",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "number-pop": {
+    "exportName": "CountUp",
+    "props": [
+      {
+        "name": "value",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "duration",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "text-swap": {
+    "exportName": "TextSwap",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "interval",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "success-check": {
+    "exportName": "SuccessCheck",
+    "props": [
+      {
+        "name": "on",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "error-shake": {
+    "exportName": "ShakeOnError",
+    "props": [
+      {
+        "name": "signal",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "React.ReactNode"
+      }
+    ]
+  },
+  "card-fan": {
+    "exportName": "CardFan",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "{ title: string; subtitle: string; }[]"
+      }
+    ]
+  },
+  "sliding-tabs": {
+    "exportName": "SlidingTabs",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "marquee-row": {
+    "exportName": "MarqueeRow",
+    "props": [
+      {
+        "name": "items",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "duration",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "skeleton-reveal": {
+    "exportName": "SkeletonReveal",
+    "props": [
+      {
+        "name": "loading",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "children",
+        "required": true,
+        "type": "React.ReactNode"
+      },
+      {
+        "name": "lines",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "agentic-badge": {
+    "exportName": "AgenticBadge",
+    "props": [
+      {
+        "name": "tone",
+        "required": false,
+        "type": "AgenticTone"
+      },
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      }
+    ]
+  },
+  "agentic-setting": {
+    "exportName": "AgenticSetting",
+    "props": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "checked",
+        "required": true,
+        "type": "boolean"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(checked: boolean) => void"
+      }
+    ]
+  },
+  "agentic-actions": {
+    "exportName": "AgenticButton",
+    "props": [
+      {
+        "name": "children",
+        "required": true,
+        "type": "React.ReactNode"
+      },
+      {
+        "name": "onClick",
+        "required": false,
+        "type": "(() => void)"
+      },
+      {
+        "name": "variant",
+        "required": false,
+        "type": "\"primary\" | \"secondary\""
+      },
+      {
+        "name": "disabled",
+        "required": false,
+        "type": "boolean"
+      },
+      {
+        "name": "busy",
+        "required": false,
+        "type": "boolean"
+      }
+    ]
+  },
+  "agentic-track": {
+    "exportName": "AgenticSlider",
+    "props": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: number) => void"
+      },
+      {
+        "name": "min",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "unit",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "agentic-table": {
+    "exportName": "AgenticTable",
+    "props": [
+      {
+        "name": "rows",
+        "required": true,
+        "type": "{ name: string; status: AgenticTone; statusLabel: string; progress: number; due: string; people: string[]; }[]"
+      },
+      {
+        "name": "caption",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  },
+  "agentic-steps": {
+    "exportName": "GuideSteps",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "steps",
+        "required": true,
+        "type": "string[]"
+      }
+    ]
+  },
+  "agentic-avatars": {
+    "exportName": "AvatarStack",
+    "props": [
+      {
+        "name": "names",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "max",
+        "required": false,
+        "type": "number"
+      }
+    ]
+  },
+  "agentic-stat": {
+    "exportName": "StatDelta",
+    "props": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "delta",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "trend",
+        "required": false,
+        "type": "\"up\" | \"down\""
+      }
+    ]
+  },
+  "agentic-segments": {
+    "exportName": "SegmentControl",
+    "props": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "options",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(value: string) => void"
+      }
+    ]
+  },
+  "agentic-usage": {
+    "exportName": "UsageMeter",
+    "props": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "total",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "segments",
+        "required": true,
+        "type": "{ label: string; value: number; }[]"
+      }
+    ]
+  },
+  "radius-scale": {
+    "exportName": "RadiusScale",
+    "props": [
+      {
+        "name": "values",
+        "required": false,
+        "type": "{ radius: number; use: string; }[]"
+      }
+    ]
+  },
+  "seat-picker": {
+    "exportName": "SeatPicker",
+    "props": [
+      {
+        "name": "title",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "session",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "poster",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "screenImg",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "tickets",
+        "required": true,
+        "type": "number"
+      },
+      {
+        "name": "onTicketsChange",
+        "required": true,
+        "type": "(tickets: number) => void"
+      },
+      {
+        "name": "value",
+        "required": true,
+        "type": "string[]"
+      },
+      {
+        "name": "onChange",
+        "required": true,
+        "type": "(seats: string[]) => void"
+      },
+      {
+        "name": "onBook",
+        "required": false,
+        "type": "((seats: string[]) => void)"
+      }
+    ]
+  },
+  "thinker-avatar": {
+    "exportName": "ThinkerAvatar",
+    "props": [
+      {
+        "name": "definition",
+        "required": true,
+        "type": "AvatarDefinition"
+      },
+      {
+        "name": "state",
+        "required": false,
+        "type": "any"
+      },
+      {
+        "name": "mood",
+        "required": false,
+        "type": "any"
+      },
+      {
+        "name": "material",
+        "required": false,
+        "type": "\"fluffy\" | \"flat\""
+      },
+      {
+        "name": "color",
+        "required": false,
+        "type": "string"
+      },
+      {
+        "name": "size",
+        "required": false,
+        "type": "number"
+      },
+      {
+        "name": "followPointer",
+        "required": false,
+        "type": "boolean"
+      },
+      {
+        "name": "still",
+        "required": false,
+        "type": "boolean"
+      },
+      {
+        "name": "label",
+        "required": false,
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,519 @@
+.deck,
+.compare,
+.reel,
+.detailSurface {
+  width: 100%;
+  max-width: 340px;
+  color: var(--ui-text, #f3efe3);
+  font-family: var(--font-inter), system-ui;
+}
+.deck button,
+.compare input,
+.capsule button,
+.reel button,
+.detailSurface button {
+  font: inherit;
+}
+.deck button,
+.capsule button,
+.reel button,
+.detailSurface button {
+  border: 0;
+  cursor: pointer;
+}
+.deck :is(button):focus-visible,
+.compare input:focus-visible,
+.capsule button:focus-visible,
+.reel button:focus-visible,
+.detailSurface button:focus-visible {
+  outline: 2px solid var(--ui-focus, #e8d6a9);
+  outline-offset: 5px;
+}
+.stack {
+  min-height: 270px;
+  display: grid;
+  position: relative;
+  margin: 15px 22px 10px 0;
+  perspective: 800px;
+}
+.card {
+  position: relative;
+  grid-area: 1 / 1;
+  text-align: left;
+  padding: 27px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #f2eddf, #c8bfa8);
+  color: #343229;
+  box-shadow:
+    inset 1px 2px 2px #fff9,
+    0 12px 20px #0003;
+  transform: translate(calc(var(--offset) * 10px), calc(var(--offset) * -6px))
+    rotate(calc(var(--offset) * 4deg));
+  z-index: calc(10 - var(--offset));
+  transition:
+    transform 0.5s,
+    background 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  overflow: hidden;
+}
+.card[aria-pressed="false"] {
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(145deg, #7c796d, #49483f);
+}
+.card[aria-pressed="false"] > * {
+  visibility: hidden;
+}
+.card > span:first-child {
+  font-size: 10px;
+}
+.card strong {
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: -1.4px;
+  font-weight: 450;
+  max-width: 230px;
+}
+.card > span:nth-child(3) {
+  font-size: 12px;
+  line-height: 1.65;
+  max-width: 220px;
+}
+.card .cardNumber {
+  position: absolute;
+  bottom: 20px;
+  right: 23px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+.deckControls,
+.reelControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 22px;
+}
+.deckControls button {
+  min-width: 44px;
+  width: auto;
+  flex: none;
+  min-height: 44px;
+  height: auto;
+  line-height: 1;
+  padding: 0.2em;
+  border-radius: 50%;
+  background: var(--ui-control, #34342f);
+  color: var(--ui-text, #f3efe3);
+  box-shadow:
+    inset 0 1px 1px #ffffff18,
+    0 4px 8px #0002;
+}
+.deckControls > span,
+.reelControls > span {
+  font-size: 11px;
+  color: var(--ui-muted, #b7b1a4);
+}
+.compareStage {
+  height: 250px;
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.before,
+.after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.before {
+  background: #292a27;
+  color: #eee8d9;
+}
+.after {
+  background: #d9d2c3;
+  color: #39382e;
+}
+.seam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #f3ecdc;
+  pointer-events: none;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px #0004;
+}
+.seam i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 44px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: #f3ecdc;
+  color: #34332d;
+  font-size: 16px;
+  font-style: normal;
+  box-shadow: 0 3px 10px #0004;
+}
+.compareLabels {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 25px;
+  font-size: 11px;
+  color: var(--ui-muted, #b7b1a4);
+}
+.compare label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.compare output {
+  color: var(--ui-muted, #b7b1a4);
+}
+.compare input {
+  width: 100%;
+  min-height: 28px;
+  accent-color: var(--ui-text, #f3efe3);
+}
+.materialSample {
+  width: 115px;
+  height: 135px;
+  border-radius: 30px;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  transform: rotate(-10deg);
+  background: linear-gradient(135deg, #696b63, #282a25);
+  box-shadow:
+    inset 1px 2px 3px #fff4,
+    0 12px 15px #0005;
+}
+.after .materialSample {
+  background: linear-gradient(135deg, #fffaf0, #bdb397);
+  box-shadow:
+    inset 1px 2px 3px #fffc,
+    0 12px 15px #5f553955;
+}
+.capsule {
+  width: 100%;
+  max-width: 380px;
+  background: linear-gradient(
+    150deg,
+    var(--ui-material-top, #494943),
+    var(--ui-material-bottom, #292a26)
+  );
+  border-radius: 32px;
+  padding: 7px;
+  box-shadow:
+    inset 0 1px 1px #fff3,
+    0 10px 20px #0003;
+  color: var(--ui-text, #f3efe3);
+}
+.capsule > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 14px;
+  padding: 12px 15px;
+  background: transparent;
+  color: inherit;
+  border-radius: 25px;
+  min-height: 66px;
+}
+.capsule > button > span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+.capsule strong {
+  font-size: 13px;
+  font-weight: 450;
+}
+.capsule > button > span:nth-child(2) > span {
+  font-size: 10px;
+  color: var(--ui-muted, #b7b1a4);
+}
+.capsuleIcon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 50%;
+  font-size: 27px;
+  background: linear-gradient(140deg, #f7f0dd, #c6ba9a);
+  color: #4b4739;
+  box-shadow: 0 3px 6px #0003;
+}
+.capsuleBody {
+  padding: 12px 20px 20px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.capsuleBody p {
+  margin: 0 0 13px;
+}
+.capsuleBody ul {
+  margin: 0;
+  padding-left: 17px;
+  color: var(--ui-muted, #b7b1a4);
+}
+.reel {
+  padding: 20px;
+  border-radius: 30px;
+  background: var(--ui-control, #34342f);
+  box-shadow:
+    inset 0 1px 1px #fff2,
+    0 10px 20px #0002;
+}
+.reelProgress {
+  display: flex;
+  gap: 5px;
+}
+.reelProgress button {
+  height: 25px;
+  flex: 1;
+  padding: 10px 0;
+  background: transparent;
+}
+.reelProgress button > span {
+  display: block;
+  height: 4px;
+  border-radius: 9px;
+  background: var(--ui-bg, #191919);
+}
+.reelProgress button > .filled {
+  background: var(--ui-text, #f3efe3);
+}
+.chapter > span {
+  font-size: 10px;
+  color: var(--ui-muted, #b7b1a4);
+  display: block;
+  margin-top: 15px;
+}
+.chapter h3 {
+  font-size: 28px;
+  font-weight: 450;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin: 8px 0 16px;
+}
+.chapter p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--ui-muted, #b7b1a4);
+  min-height: 65px;
+  margin: 0;
+}
+.reelShape {
+  position: relative;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.reelShape i {
+  width: 45px;
+  height: 75px;
+  border-radius: 16px;
+  background: linear-gradient(140deg, #f9f2e1, #bab096);
+  box-shadow:
+    inset 1px 2px 1px #fff6,
+    4px 9px 10px #0003;
+  transform: rotate(-16deg);
+}
+.reelShape i:nth-child(2) {
+  height: 95px;
+  transform: translateY(-6px) rotate(9deg);
+}
+.reelShape i:last-child {
+  transform: rotate(23deg);
+  background: linear-gradient(140deg, #7b7a6e, #3f4138);
+}
+.reelControls {
+  margin-top: 16px;
+}
+.reelControls button {
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  background: var(--ui-bg, #191919);
+  color: var(--ui-text, #f3efe3);
+}
+.reelControls button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.detailSurface {
+  padding: 25px;
+  border-radius: 30px;
+  background: var(--ui-control, #34342f);
+  box-shadow:
+    inset 0 1px 1px #fff3,
+    0 15px 25px #0002;
+}
+.detailSculpture {
+  height: 130px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+}
+.detailSculpture i {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  border-radius: 26px;
+  background: linear-gradient(140deg, #f5efdf, #b5ab91);
+  transform: translateX(-20px) rotate(-17deg);
+  box-shadow:
+    inset 1px 2px 2px #fff8,
+    0 10px 15px #0003;
+  transition: transform 0.6s cubic-bezier(0.2, 1.2, 0.3, 1);
+}
+.detailSculpture i:last-child {
+  background: linear-gradient(140deg, #77776d, #35372f);
+  transform: translateX(22px) rotate(18deg);
+}
+.detailOpen .detailSculpture i:first-child {
+  transform: translateX(-40px) rotate(-28deg);
+}
+.detailOpen .detailSculpture i:last-child {
+  transform: translateX(40px) rotate(28deg);
+}
+.detailSurface h3 {
+  font-size: 27px;
+  font-weight: 450;
+  letter-spacing: -1px;
+  margin: 15px 0;
+}
+.detailSurface > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--ui-muted, #b7b1a4);
+}
+.detailSurface > button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 11px;
+  border-radius: 20px;
+  background: var(--ui-bg, #191919);
+  color: var(--ui-text, #f3efe3);
+  margin-top: 22px;
+}
+.detailBody {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--ui-muted, #b7b1a4);
+  padding-top: 18px;
+}
+.detailBody p {
+  margin: 0;
+}
+.chapter {
+  animation: arrive 0.35s ease-out;
+}
+@keyframes arrive {
+  from {
+    opacity: 0.3;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .detailSculpture i {
+    transition: none;
+  }
+  .chapter {
+    animation: none;
+  }
+}
+@media (max-width: 380px) {
+  .stack {
+    min-height: 270px;
+  }
+  .card {
+    padding: 22px;
+  }
+  .card strong {
+    font-size: 27px;
+  }
+  .reel {
+    padding: 17px;
+  }
+  .chapter h3 {
+    font-size: 26px;
+  }
+  .capsule > button {
+    gap: 10px;
+    padding: 10px;
+  }
+  .capsule strong {
+    font-size: 12px;
+  }
+  .capsuleIcon {
+    width: 32px;
+    height: 32px;
+  }
+  .detailSurface {
+    padding: 22px;
+  }
+}
+.deck.deck,
+.compare.compare,
+.reel.reel,
+.detailSurface.detailSurface {
+  max-width: 340px;
+}
+.capsule.capsule {
+  max-width: 380px;
+}
+.seam {
+  left: clamp(20px, var(--reveal-position, 50%), calc(100% - 20px)) !important;
+}
+.reelControls.reelControls {
+  gap: 10px;
+}
+.reelControls.reelControls button {
+  font: 11px system-ui;
+  white-space: nowrap;
+  flex: none;
+  min-width: 70px;
+}
+.reelControls.reelControls > span {
+  white-space: nowrap;
+  font-size: 10px;
+}
+.detailSurface.detailSurface > button {
+  font: 11px system-ui;
+}
+.card.card {
+  font-family: var(--font-inter), system-ui;
+}
+.capsule.capsule > button {
+  font-family: var(--font-inter), system-ui;
+}
