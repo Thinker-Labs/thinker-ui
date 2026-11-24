@@ -1,4 +1,4 @@
-.section{max-width:1260px;margin:0 auto;padding:clamp(28px,4vw,56px) 22px clamp(56px,7vw,96px);display:block;color:var(--ui-text,#f4f1e9);position:relative}
+.section{max-width:1260px;margin:0 auto;padding:clamp(28px,4vw,56px) 22px clamp(36px,4.5vw,64px);display:block;color:var(--ui-text,#f4f1e9);position:relative}
 .copy{text-align:center;margin-bottom:34px}.eyebrow{margin:0 0 18px;font-size:12px;letter-spacing:.04em;color:var(--ui-muted,#a8a498)}
 .copy h2{margin:0 0 22px;font-family:var(--font-thinker-headline),var(--font-inter),sans-serif;font-weight:500;font-size:clamp(32px,3.8vw,48px);line-height:1.04;letter-spacing:-.02em}
 .copy h2 span{color:var(--ui-muted,#a8a498)}
