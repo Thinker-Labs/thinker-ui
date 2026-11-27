@@ -119,23 +119,6 @@ export function EmptyState({
     </div>
   );
 }
-export function LoadingSkeleton({
-  label = "Loading preview",
-}: {
-  label?: string;
-}) {
-  return (
-    <div className={s.skeleton} role="status">
-      <div className={s.skeletonTile} />
-      <div>
-        <span />
-        <span />
-        <span />
-      </div>
-      <p>{label}</p>
-    </div>
-  );
-}
 export function InlineNotice({
   title,
   description,
