@@ -31,8 +31,8 @@ export default function ThinkerUIPage() {
 
       <section id="overview" className={styles.hero} aria-labelledby="ui-title">
         <div className={styles.cinematicBackdrop}><MaterialStage /></div><div className={styles.heroContent}>
-        <p className={styles.heroEyebrow}>A different kind of component collection</p><h1 id="ui-title">A little more<br/><span>feeling.</span></h1>
-        <p className={styles.intro}>Thinker UI. Tactile React components.<br className={styles.desktopBreak} /> Less friction. More room for your ideas.</p>
+        <h1 id="ui-title">Tactile React<br/><span>components.</span></h1>
+        <p className={styles.intro}>72 components with real materials, bounded motion and<br className={styles.desktopBreak} /> copyable React + CSS source. Open source under MIT.</p>
         <div className={styles.actions}><Link className={styles.primary} href="/thinker-ui/components#gallery">Explore the collection <span aria-hidden="true">↗</span></Link><a className={styles.secondary} href="#living-title">Try the studio <span aria-hidden="true">↓</span></a></div>
         <HeroProof />
         </div>
@@ -44,7 +44,7 @@ export default function ThinkerUIPage() {
 
       <LivingSections />
 
-      <footer className={styles.footer}><Link className={styles.brand} href="https://www.thinkerlab.tech"><Mark small />Thinker</Link><nav className={styles.footerLinks} aria-label="Footer"><Link href="/thinker-ui/components">Components</Link><a href="https://github.com/Thinker-Labs/thinker-ui">GitHub</a><a href="https://github.com/Thinker-Labs/thinker-ui/blob/main/LICENSE">License</a></nav><p>Thinker UI · Design preview</p><a href="#overview">Back to top ↑</a></footer>
+      <footer className={styles.footer}><Link className={styles.brand} href="https://www.thinkerlab.tech"><Mark small />Thinker</Link><nav className={styles.footerLinks} aria-label="Footer"><Link href="/thinker-ui/components">Components</Link><a href="https://github.com/Thinker-Labs/thinker-ui">GitHub</a><a href="https://github.com/Thinker-Labs/thinker-ui/blob/main/LICENSE">License</a></nav><p>Thinker UI · Open source under MIT</p><a href="#overview">Back to top ↑</a></footer>
     </main>
   );
 }

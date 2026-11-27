@@ -7,7 +7,7 @@ import type { AvatarDefinition } from '@/vendor/open-bot-avatar';
 import s from './hero-proof.module.css';
 
 const fox = thinkerCast.find(c => c.id === 'fox') as AvatarDefinition;
-const lines: Record<string, string> = { idle: 'Waiting for the next thought.', working: 'Running tools. Eyes on the task.', done: 'Finished. Nothing left open.' };
+const lines: Record<string, string> = { idle: 'Waiting for input.', working: 'Running tools.', done: 'Done. Nothing left open.' };
 
 /** Real components in the hero: the tabs are the library's MaterialTabs, the character is ThinkerAvatar. */
 export default function HeroProof() {

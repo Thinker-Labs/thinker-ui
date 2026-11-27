@@ -103,10 +103,10 @@ export function AgentState({
       <div role="status">
         <strong>
           {state === "working"
-            ? "Finding the shape."
+            ? "Working on the steps."
             : state === "paused"
-              ? "Taking a breath."
-              : "Ready when you are."}
+              ? "Paused."
+              : "Ready."}
         </strong>
         <p>{message}</p>
       </div>
@@ -269,7 +269,7 @@ export function FileDropzone({
           ↥
         </span>
         <label htmlFor={id}>
-          {file ? file.name : "Bring a little context."}
+          {file ? file.name : "Choose a file."}
         </label>
         <p>
           {file

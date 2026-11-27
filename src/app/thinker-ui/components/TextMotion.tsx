@@ -83,7 +83,7 @@ export function TextMotionDemo() {
           maxLength={180}
           onChange={(event) => setText(event.target.value)}
           rows={2}
-          placeholder="Give a thought some room."
+          placeholder="Type to preview."
         />
       </label>
       <div className={s.stage}>
