@@ -155,7 +155,7 @@ export function CardFan({
 }: {
   items: { title: string; subtitle: string }[];
 }) {
-  const tones = [styles.fanBlue, styles.fanGray, styles.fanOrange, styles.fanPink];
+  const tones = [styles.fanStone, styles.fanLinen, styles.fanClay, styles.fanGraphite];
   return (
     <div className={styles.fan} tabIndex={0} aria-label="A stack of cards. Focus or hover to fan them out.">
       {items.slice(0, 4).map((item, index) => (
