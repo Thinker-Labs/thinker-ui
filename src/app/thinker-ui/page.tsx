@@ -2,6 +2,7 @@ import { Space_Grotesk } from 'next/font/google';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {BrandMark} from './BrandMark';
+import {catalog} from './components/catalog';
 import SiteHeader from './SiteHeader';
 import LivingSections from './LivingSections';
 import MaterialStage from './MaterialStage';
@@ -32,7 +33,7 @@ export default function ThinkerUIPage() {
       <section id="overview" className={styles.hero} aria-labelledby="ui-title">
         <div className={styles.cinematicBackdrop}><MaterialStage /></div><div className={styles.heroContent}>
         <h1 id="ui-title">Tactile React<br/><span>components.</span></h1>
-        <p className={styles.intro}>72 components with real materials, bounded motion and<br className={styles.desktopBreak} /> copyable React + CSS source. Open source under MIT.</p>
+        <p className={styles.intro}>{catalog.length} components with real materials, bounded motion and<br className={styles.desktopBreak} /> copyable React + CSS source. Open source under MIT.</p>
         <div className={styles.actions}><Link className={styles.primary} href="/thinker-ui/components#gallery">Explore the collection <span aria-hidden="true">↗</span></Link><a className={styles.secondary} href="#living-title">Try the studio <span aria-hidden="true">↓</span></a></div>
         <HeroProof />
         </div>
