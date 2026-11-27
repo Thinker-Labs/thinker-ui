@@ -519,16 +519,6 @@
       }
     ]
   },
-  "skeleton": {
-    "exportName": "LoadingSkeleton",
-    "props": [
-      {
-        "name": "label",
-        "required": false,
-        "type": "string"
-      }
-    ]
-  },
   "notice": {
     "exportName": "InlineNotice",
     "props": [
@@ -729,41 +719,6 @@
       }
     ]
   },
-  "timer": {
-    "exportName": "FocusTimer",
-    "props": [
-      {
-        "name": "seconds",
-        "required": true,
-        "type": "number"
-      },
-      {
-        "name": "onChange",
-        "required": true,
-        "type": "(seconds: number) => void"
-      }
-    ]
-  },
-  "reveal": {
-    "exportName": "RevealCard",
-    "props": [
-      {
-        "name": "title",
-        "required": true,
-        "type": "string"
-      },
-      {
-        "name": "summary",
-        "required": true,
-        "type": "string"
-      },
-      {
-        "name": "children",
-        "required": true,
-        "type": "React.ReactNode"
-      }
-    ]
-  },
   "idea-object": {
     "exportName": "IdeaObject",
     "props": [
@@ -839,56 +794,6 @@
       }
     ]
   },
-  "activity-capsule": {
-    "exportName": "ActivityCapsule",
-    "props": [
-      {
-        "name": "title",
-        "required": true,
-        "type": "string"
-      },
-      {
-        "name": "detail",
-        "required": true,
-        "type": "string"
-      },
-      {
-        "name": "expanded",
-        "required": true,
-        "type": "boolean"
-      },
-      {
-        "name": "onExpandedChange",
-        "required": true,
-        "type": "(open: boolean) => void"
-      },
-      {
-        "name": "children",
-        "required": true,
-        "type": "ReactNode"
-      }
-    ]
-  },
-  "story-reel": {
-    "exportName": "StoryReel",
-    "props": [
-      {
-        "name": "items",
-        "required": true,
-        "type": "ReelItem[]"
-      },
-      {
-        "name": "value",
-        "required": true,
-        "type": "string"
-      },
-      {
-        "name": "onChange",
-        "required": true,
-        "type": "(id: string) => void"
-      }
-    ]
-  },
   "detail-surface": {
     "exportName": "DetailSurface",
     "props": [
@@ -910,41 +815,6 @@
     ]
   },
   "material-dialog": {
-    "exportName": "MaterialDialog",
-    "props": [
-      {
-        "name": "open",
-        "required": true,
-        "type": "boolean"
-      },
-      {
-        "name": "onOpenChange",
-        "required": true,
-        "type": "(open: boolean) => void"
-      },
-      {
-        "name": "title",
-        "required": true,
-        "type": "string"
-      },
-      {
-        "name": "description",
-        "required": false,
-        "type": "string"
-      },
-      {
-        "name": "children",
-        "required": true,
-        "type": "ReactNode"
-      },
-      {
-        "name": "side",
-        "required": false,
-        "type": "\"center\" | \"right\""
-      }
-    ]
-  },
-  "material-drawer": {
     "exportName": "MaterialDialog",
     "props": [
       {
