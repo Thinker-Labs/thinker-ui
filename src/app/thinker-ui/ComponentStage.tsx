@@ -38,9 +38,8 @@ export default function ComponentStage(){
 
   return <section className={s.section} aria-labelledby="bench-stage-title">
     <div className={s.copy}>
-      <p className={s.eyebrow}>On the bench</p>
-      <h2 id="bench-stage-title">Small parts.<br/><span>One feeling.</span></h2>
-      <p>Turn the dial, drag the slider, change the finish. Every part answers to the same value, and the tile follows.</p>
+      <h2 id="bench-stage-title">One value.<br/><span>Every control.</span></h2>
+      <p>The dial, slider, finish and extras all drive one value. The tile and readout follow.</p>
     </div>
     <div className={s.stage} style={vars}>
       <div className={s.plinth} aria-hidden="true"/>
@@ -87,6 +86,6 @@ export default function ComponentStage(){
         </div>
       </div>
     </div>
-    <p className={s.caption}>A live design study. No data is sent or saved.</p>
+    <p className={s.caption}>Local state only. Nothing is sent or saved.</p>
   </section>;
 }
